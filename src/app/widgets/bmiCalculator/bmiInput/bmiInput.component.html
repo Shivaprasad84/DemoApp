@@ -1,1 +1,14 @@
-<input #input (change)="emitValue(input.value)" (click)="input.select()" type="text" [value]="value"><span class="unit">{{ unit }}</span>
+<!-- <input #input (change)="emitValue(input.value)" (click)="input.select()" type="text" [value]="value"><span class="unit">{{ unit }}</span> -->
+<table>
+  <tr>
+    <td><b>Height:</b> </td>
+    <td><input #heightRef type="text" (click)="heightRef.select()" (input)="onHeightChange(heightRef.value)" [value]="height"> cm</td>
+  </tr>
+  <tr>
+    <td><b>Weight:</b> </td>
+    <td><input #weightRef type="text" (click)="weightRef.select()" (input)="onWeightChange(weightRef.value)" [value]="weight"> kg</td>
+  </tr>
+</table>
+<br>
+<button class="btn" (click)="emitValue()">Calculate BMI</button>
+<button class="btn" (click)="clear()">Clear</button>

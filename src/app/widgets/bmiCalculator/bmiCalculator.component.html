@@ -1,15 +1,6 @@
 <app-heading heading="BMI Calculator"></app-heading><br>
 <div>
-  <table>
-    <tr>
-      <td>Height: </td>
-      <td><bmi-input (valueChanged)="onHeightChange($event)" [value]="height" unit="cm"></bmi-input></td>
-    </tr>
-    <tr>
-      <td>Weight: </td>
-      <td><bmi-input (valueChanged)="onWeightChange($event)" [value]="weight" unit="kg"></bmi-input></td>
-    </tr>
-  </table>
+  <bmi-input (valueChanged)="calculateBmi($event)" (clearEvent)="clear()"></bmi-input>
   <br>
-  <bmi-result [height]="height" [weight]="weight" (clearEvent)="clear()"></bmi-result>
+  <bmi-result [bmi]="bmi"></bmi-result>
 </div>

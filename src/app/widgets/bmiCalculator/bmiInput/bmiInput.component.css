@@ -1,3 +1,11 @@
-.unit {
-  margin-left: 5px;
+.btn {
+  margin-left: 15px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+td {
+  padding-left: 15px;
 }
