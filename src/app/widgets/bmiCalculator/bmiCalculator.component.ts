@@ -7,7 +7,6 @@ import { Component } from "@angular/core";
 export class BMICalculator {
   public height = 0;
   public weight = 0;
-  public bmi = 0;
 
   onHeightChange(height: string) {
     this.height = +height;
@@ -20,6 +19,5 @@ export class BMICalculator {
   clear() {
     this.height = 0;
     this.weight = 0;
-    this.bmi = 0;
   }
 }

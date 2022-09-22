@@ -1,4 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BMICalculator } from './bmiCalculator/bmiCalculator.component';
@@ -18,7 +18,6 @@ import { HeadingComponent } from './heading/heading.component';
     BrowserModule,
     FormsModule
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [HeadingComponent, BMICalculator],
   providers: []
 })

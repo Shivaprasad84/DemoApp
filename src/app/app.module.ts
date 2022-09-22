@@ -11,12 +11,10 @@ import { WidgetsModule } from './widgets/widgets.module';
   ],
   imports: [
     BrowserModule,
-    WidgetsModule,
-    FormsModule
+    WidgetsModule
   ],
   exports: [],
   providers: [],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppRootComponent]
 })
 export class AppModule { }

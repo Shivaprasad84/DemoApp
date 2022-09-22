@@ -16,11 +16,16 @@ export class BmiResultComponent {
     if (this.height === 0) {
       return;
     }
-    this.bmi = +(this.weight / (this.height * this.height)).toFixed(3);
+    const heightMeters = this.cmTom(this.height);
+    this.bmi = +(this.weight / (heightMeters * heightMeters)).toFixed(3);
   }
 
   clear() {
     this.bmi = 0;
     this.clearEvent.emit();
+  }
+
+  private cmTom(cm: number): number {
+    return cm / 100;
   }
 }
