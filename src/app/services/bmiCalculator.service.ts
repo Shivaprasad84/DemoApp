@@ -1,6 +1,15 @@
+import { Inject, Injectable } from "@angular/core";
 import { BmiInputModel } from "../widgets/models/bmiInput.model";
+import { ILoggerService } from "./logger.contract";
+
+@Injectable({
+  providedIn: 'root'
+})
 export class BmiCalculatorService {
+  constructor(@Inject('logger') private logger: ILoggerService) {}
+
   getBmi(bmiInput: BmiInputModel): number {
+    this.logger.write('getBmi called...');
     if (bmiInput.height === 0) {
       return 0;
     }
