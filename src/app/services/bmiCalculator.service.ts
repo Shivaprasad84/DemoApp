@@ -2,9 +2,7 @@ import { Inject, Injectable } from "@angular/core";
 import { BmiInputModel } from "../widgets/models/bmiInput.model";
 import { ILoggerService } from "./logger.contract";
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class BmiCalculatorService {
   constructor(@Inject('logger') private logger: ILoggerService) {}
 
