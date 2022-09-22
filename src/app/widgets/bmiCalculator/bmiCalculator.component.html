@@ -1,0 +1,19 @@
+<app-heading heading="BMI Calculator"></app-heading><br>
+<div>
+  <table>
+    <tr>
+      <td>Height: </td>
+      <td><input #heightValue type="text" [value]="height" (input)="onHeightChange(heightValue.value)"></td>
+    </tr>
+    <tr>
+      <td>Weight: </td>
+      <td><input #weightValue type="text" [value]="weight" (input)="onWeightChange(weightValue.value)"></td>
+    </tr>
+    <tr>
+      <td><button (click)="calculateBmi()">Calculate BMI</button></td>
+      <td><button (click)="clear()">Clear</button></td>
+    </tr>
+  </table>
+  <br>
+  <p>BMI: {{ bmi }}</p>
+</div>
