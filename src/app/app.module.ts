@@ -1,8 +1,10 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRootComponent } from './appRoot.component';
+import { BmiCalculatorService } from './services/bmiCalculator.service';
+import { FileLoggerService } from './services/fileLogger.service';
+// import { LoggerService } from './services/loggerService.service';
 import { WidgetsModule } from './widgets/widgets.module';
 
 @NgModule({
@@ -14,7 +16,10 @@ import { WidgetsModule } from './widgets/widgets.module';
     WidgetsModule
   ],
   exports: [],
-  providers: [],
+  providers: [
+    { provide: BmiCalculatorService, useClass: BmiCalculatorService },
+    { provide: 'logger', useClass: FileLoggerService }
+  ],
   bootstrap: [AppRootComponent]
 })
 export class AppModule { }

@@ -1,9 +1,4 @@
-import { Injectable } from "@angular/core";
 import { BmiInputModel } from "../widgets/models/bmiInput.model";
-
-@Injectable({
-  providedIn: 'root'
-})
 export class BmiCalculatorService {
   getBmi(bmiInput: BmiInputModel): number {
     if (bmiInput.height === 0) {
