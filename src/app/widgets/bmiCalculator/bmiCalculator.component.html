@@ -3,17 +3,13 @@
   <table>
     <tr>
       <td>Height: </td>
-      <td><input #heightValue type="text" [value]="height" (input)="onHeightChange(heightValue.value)"></td>
+      <td><bmi-input (valueChanged)="onHeightChange($event)" [value]="height"></bmi-input></td>
     </tr>
     <tr>
       <td>Weight: </td>
-      <td><input #weightValue type="text" [value]="weight" (input)="onWeightChange(weightValue.value)"></td>
-    </tr>
-    <tr>
-      <td><button (click)="calculateBmi()">Calculate BMI</button></td>
-      <td><button (click)="clear()">Clear</button></td>
+      <td><bmi-input (valueChanged)="onWeightChange($event)" [value]="weight"></bmi-input></td>
     </tr>
   </table>
   <br>
-  <p>BMI: {{ bmi }}</p>
+  <bmi-result [height]="height" [weight]="weight" (clearEvent)="clear()"></bmi-result>
 </div>

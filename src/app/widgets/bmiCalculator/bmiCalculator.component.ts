@@ -17,13 +17,6 @@ export class BMICalculator {
     this.weight = +weight;
   }
 
-  calculateBmi() {
-    if (this.height === 0) {
-      return;
-    }
-    this.bmi = +(this.weight / (this.height * this.height)).toFixed(3);
-  }
-
   clear() {
     this.height = 0;
     this.weight = 0;
